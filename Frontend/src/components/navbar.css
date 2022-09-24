@@ -1,0 +1,134 @@
+img {
+    width: 50px;
+    height: 50px;
+}
+.navbar {
+    padding: 0px 25px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar>.nav-items>a{
+    color: #ffff;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 15px;
+    padding: 10px 0;
+    position: relative;
+    opacity: 0.9;
+}
+
+.navbar>.nav-items>a:hover {
+    color: black;
+}
+
+.navbar>.nav-items>a:hover {
+    opacity: 1;
+}
+
+.navbar>.nav-items>a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: black;
+    transition: all 0.45s;
+}
+
+.navbar>.nav-items>a:hover::before {
+    width: 100%;
+}
+
+.navbar>.nav-toggle {
+    display: none;
+}
+
+/* @media (max-width: 700px) {
+    .navbar>.nav-items{
+        position: absolute;
+        top: 60px;
+        display: flex;
+        padding-top: 50px;
+        flex-direction: column;
+        background:rgb(43, 18, 156);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: all .45s;
+    }
+    
+    .navbar>.nav-items>a{
+        padding-left: 185px;
+        margin: 1px;
+        font-size: 20px;
+    }
+    
+    .navbar>.nav-items>a::before {
+        background-color: transparent;
+    }
+
+    .navbar>.nav-items.open {
+        transform: translateX(0);
+    }
+
+    .navbar>.nav-toggle {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .nav-toggle>.bar {
+        position: relative;
+        width: 32px;
+        height: 2px;
+        background: #ffff;
+        transition: all 0.45s ease-in-out;
+    }
+
+
+    .nav-toggle>.bar::before,
+    .nav-toggle>.bar::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: #ffff;
+        border-radius: 2px;
+        transition: all 0.45s ease-in-out;
+    }
+
+    .nav-toggle>.bar::before{
+        width: 25px;
+        transform: translateX(-8px);
+        right: 0;
+    }
+
+    .nav-toggle>.bar::after {
+        width: 32px;
+        transform: translateY(8px)
+    }
+
+    .nav-toggle.open>.bar {
+        transform: translateX(-40px);
+        background-color: transparent;
+    }
+
+    .nav-toggle.open>.bar::before {
+        width: 32px;
+        transform: rotate(45deg) translate(26px, -26px)
+    }
+
+    .nav-toggle.open>.bar::after {
+        transform: rotate(-45deg) translate(26px, 26px)
+    }
+
+    .log {
+        width: 170px;
+    }
+} */
